@@ -17,6 +17,8 @@ OpenAIValueMapping::OpenAIValueMapping()
 	imageSizes.Add(EOAImageSize::SMALL, TEXT("256x256"));
 	imageSizes.Add(EOAImageSize::MEDIUM, TEXT("512x512"));
 	imageSizes.Add(EOAImageSize::LARGE, TEXT("1024x1024"));
-	
+
+	turboModels.Add(EOATurboModel::TURBO, TEXT("TURBO"));
+	turboModels.Add(EOATurboModel::TURBO_0301, TEXT("TURBO-0301"));
 }
 

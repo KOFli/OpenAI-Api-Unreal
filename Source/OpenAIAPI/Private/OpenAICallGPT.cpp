@@ -63,23 +63,23 @@ void UOpenAICallGPT::Activate()
 	switch (engine)
 	{
 	case EOAEngineType::DAVINCI:
-			apiMethod = "davinci";
-	break;
+		apiMethod = "davinci";
+		break;
 	case EOAEngineType::CURIE:
-			apiMethod = "curie";
-	break;
+		apiMethod = "curie";
+		break;
 	case EOAEngineType::BABBAGE:
-			apiMethod = "babbage";
-	break;
+		apiMethod = "babbage";
+		break;
 	case EOAEngineType::ADA:
-			apiMethod = "ada";
-	break;
+		apiMethod = "ada";
+		break;
 	case EOAEngineType::TEXT_DAVINCI_002:
 		apiMethod = "text-davinci-002";
-	break;
+		break;
 	case EOAEngineType::TEXT_CURIE_001:
 		apiMethod = "text-curie-001";
-	break;
+		break;
 	case EOAEngineType::TEXT_BABBAGE_001:
 		apiMethod = "text-babbage-001";
 		break;

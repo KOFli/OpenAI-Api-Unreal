@@ -15,6 +15,7 @@
 class OPENAIAPI_API OpenAIParser
 {
 public:
+	OpenAIParser();
 	OpenAIParser(const FGPT3Settings&);
 	~OpenAIParser();
 
@@ -23,4 +24,5 @@ public:
 	FCompletion ParseCompletion(const FJsonObject&);
 	FCompletionInfo ParseCompletionInfo(const FJsonObject&);
 	FString ParseGeneratedImage(FJsonObject&);
+	FChatCompletion ParseChatCompletion(const FJsonObject&);
 };

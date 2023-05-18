@@ -3,6 +3,10 @@
 
 #include "OpenAIParser.h"
 
+OpenAIParser::OpenAIParser()
+{
+}
+
 // Constructor
 OpenAIParser::OpenAIParser(const FGPT3Settings& promptSettings)
 	: settings(promptSettings)
@@ -73,6 +77,18 @@ FString OpenAIParser::ParseGeneratedImage(FJsonObject& json)
 {
 	FString res = "";
 	res = json.GetStringField(TEXT("url"));
+
+	return res;
+}
+
+FChatCompletion OpenAIParser::ParseChatCompletion(const FJsonObject& json)
+{
+	FChatCompletion res = {};
+	res.index = json.GetIntegerField(TEXT("index"));
+	TSharedPtr<FJsonObject> messageObj = json.GetObjectField(TEXT("message"));
+	res.role = messageObj->GetStringField(TEXT("role"));
+	res.content = messageObj->GetStringField(TEXT("content"));
+	res.finishReason = json.GetStringField(TEXT("finish_reason"));
 
 	return res;
 }
